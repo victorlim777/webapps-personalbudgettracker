@@ -1,0 +1,75 @@
+  <section id="transaction">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>Transaction Management</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="mb-3">
+              <label for="judul" class="form-label">Judul</label>
+              <input type="text" class="form-control" id="judul" name="judul" />
+            </div>
+            <div class="mb-3">
+              <label for="jumlah" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" id="jumlah" name="jumlah" />
+            </div>
+            <div class="mb-1">
+              <label for="kategori" class="form-label">Kategori</label>
+            </div>
+            <div class="d-flex mb-3">
+              <select id="kategori" name="kategori" class="form-select">
+                <option value="Gaji">Gaji</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Sewa">Sewa</option>
+                <option value="Hiburan">Hiburan</option>
+              </select>
+              <button type="button" class="btn btn-secondary btn-sm">Tambah Kategori</button>
+            </div>
+            <div class="mb-3">
+              <label for="tanggal" class="form-label">Tanggal</label>
+              <input type="date" class="form-control" id="tanggal" name="tanggal" />
+            </div>
+            <button class="btn btn-primary" type="submit" {{on "click" this.addToTable}}>Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transaction-filters">
+    <div class="container pt-5 text-end">
+        <div class="mb-3">
+          <div class="d-inline-flex col-md-4 col-form-label text-right">
+            <label for="kategori-filter" id="kategori-filter" name="kategori-filter" class="form-label d-flex justify-content-end align-items-end pe-3">Kategori</label>
+            <select id="kategori-filter" name="kategori-filter" class="form-select">
+              <option value="Gaji">Gaji</option>
+              <option value="Makanan">Makanan</option>
+              <option value="Sewa">Sewa</option>
+              <option value="Hiburan">Hiburan</option>
+            </select>
+            <input type="date" class="form-control" id="tanggal-filter" name="tanggal-filter" />
+            <button type="submit" class="btn btn-warning">Filter</button>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="transaction-details">
+      <div class="container">         
+          <table class="table table-striped" id="transaction-table">
+              <thead>
+                <tr>
+                  <th>Judul</th>
+                  <th>Jumlah</th>
+                  <th>Kategori</th>
+                  <th>Tanggal</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+      </div>
+  </section>
+
+    
